@@ -1,7 +1,5 @@
 // Find the greatest number among 10 number.
 
-// ar[] = 5,4,3,2,1,6,7,8,9,0
-// ar [0]> ar [1] 
 #include<stdio.h>
 int main()
 {

@@ -69,3 +69,5 @@ int main()
 
     return 0;
 }
+
+// Matrix addition and multiplication uses same logic
