@@ -52,6 +52,3 @@ int main()
 
     return 0;
 }
-
-
-//The core logic behind the ascending and descending is that we can use
