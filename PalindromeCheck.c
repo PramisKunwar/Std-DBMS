@@ -10,11 +10,13 @@ int main()
     scanf("%s",s);
     l = strlen(s);
 
-    for(i=l;i>=0;i--)
+    for(i=l-1;i>=0;i--)
     {
         r[j]=s[i];
         j=j+1;
     }
+
+     r[j] = '\0';
 
     printf("Reverse is ");
     for(j=0;j<=l;j++)
