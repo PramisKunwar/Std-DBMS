@@ -10,12 +10,16 @@ This project consolidates 11 separate C programs into a single, interactive menu
 
 ---
 ![Terminal-Project](/Terminal.png)
+
 ---
 ![Terminal-Project](/Terminal2.png)
+
 ---
 ![Terminal-Project](/Terminal3.png)
+
 ---
 ![Terminal-Project](/Terminal4.png)
+
 ---
 
 ##  Tasks Included
