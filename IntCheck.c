@@ -1,4 +1,4 @@
-// WAP to input number and check whether it is positive ,negative or zero using user defined function
+// Program to check whether input num is positive ,negative or zero using user defined function
 
 #include<stdio.h>
 void check(int n);

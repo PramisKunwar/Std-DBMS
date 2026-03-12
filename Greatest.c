@@ -1,4 +1,4 @@
-// Find the greatest number among 10 number.
+// Program to find the greatest number among 10 number.
 
 #include<stdio.h>
 int main()

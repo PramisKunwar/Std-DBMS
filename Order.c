@@ -1,4 +1,4 @@
-// Sort n numbers in ascending and descending order.       
+// Program to Sort n numbers in ascending and descending order.       
 #include<stdio.h>
 int main()
 {

@@ -1,4 +1,4 @@
-// WAP to print multiplication table of an entered number using user define function
+// Program to print multiplication table of an entered number using user define function
 
 #include<stdio.h>
 void mul(int n);
@@ -22,5 +22,4 @@ void mul(n)
 }
 
 // The main logic of a multiplciatopn ya multiplication table is the the that the when a n user 
-// enters a number then that number should be multo[l m] multiplied by i numbers from 1 to 10 so the 
-// main logic is that the number should be multiplied by 
+// enters a number then that number

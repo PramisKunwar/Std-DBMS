@@ -1,4 +1,4 @@
-// WAP in C to input marls obtained by n-students in computer science and 
+// Program to input marks obtained by n-students in computer science and 
 // and Calculate average marks of all and number of failed students. 
 
 #include<stdio.h>
