@@ -20,6 +20,3 @@ void mul(n)
         printf("%d * %d = %d \n",n,i,m);
     }
 }
-
-// The main logic of a multiplciatopn ya multiplication table is the the that the when a n user 
-// enters a number then that number
