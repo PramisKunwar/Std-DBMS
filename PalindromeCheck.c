@@ -1,7 +1,7 @@
 //Program to check whether the given string is palindrome or not.
 #include<stdio.h>
 #include<string.h>
-int main()
+void checkPalindrome()
 {
     char s[10],r[10];
     int l,i,j=0;
@@ -18,7 +18,7 @@ int main()
      r[j] = '\0';
 
     printf("Reverse is ");
-    for(j=0;j<=l;j++)
+    for(j=0;j<l;j++)
     {
         printf("%c",r[j]);
     }
@@ -31,5 +31,4 @@ int main()
     {
         printf("\n The string is not palindrome");
     }
-    return 0;
 }

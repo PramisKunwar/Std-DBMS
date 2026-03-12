@@ -2,13 +2,12 @@
 
 #include<stdio.h>
 void check(int n);
-int main ()
+void checkNumberSign()
 {
     int n;
     printf("Enter a number ");
     scanf("%d",&n);
     check(n);
-    return 0;
 }
 
 void check( int n)

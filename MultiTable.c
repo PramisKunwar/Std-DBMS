@@ -2,7 +2,7 @@
 
 #include<stdio.h>
 void mul(int n);
-int main()
+void printMultiplicationTable()
 {
     int n;
     printf("Enter a number ");
@@ -10,7 +10,7 @@ int main()
     mul(n);
 }
 
-void mul(n)
+void mul(int n)
 {
     int i,m;
     printf("The multiplication table of %d is: \n",n);

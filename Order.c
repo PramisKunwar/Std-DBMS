@@ -1,6 +1,6 @@
 // Program to Sort n numbers in ascending and descending order.       
 #include<stdio.h>
-int main()
+void sortNumbers()
 {
     int a[10],i,j,temp,n;
     printf("How many numbers? ");
@@ -49,6 +49,4 @@ int main()
     {
         printf("%d\t",a[i]); 
     }
-
-    return 0;
 }

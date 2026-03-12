@@ -2,9 +2,9 @@
 // and Calculate average marks of all and number of failed students. 
 
 #include<stdio.h>
-int main()
+void calculateAverageAndFailed()
 {
-    int n,i,avg,a[50],sum,f=0;
+    int n,i,avg,a[50],sum=0,f=0;
     printf("enter how many students marks you want to enter ");
     scanf("%d",&n);
 
@@ -26,6 +26,4 @@ int main()
     }
 
     printf("\n %d students are failed ",f);
-
-    return 0;
 }
