@@ -9,6 +9,14 @@
 This project consolidates 11 separate C programs into a single, interactive menu-driven application. Each task lives in its own dedicated source file, keeping the codebase modular, readable, and easy to extend. Users simply pick a task from the numbered menu and the program handles the rest.
 
 ---
+![Terminal-Project](/Terminal.png)
+---
+![Terminal-Project](/Terminal2.png)
+---
+![Terminal-Project](/Terminal3.png)
+---
+![Terminal-Project](/Terminal4.png)
+---
 
 ##  Tasks Included
 
