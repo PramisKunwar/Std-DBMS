@@ -1,52 +1,39 @@
-// Program to Sort n numbers in ascending and descending order.       
-#include<stdio.h>
-void sortNumbers()
-{
-    int a[10],i,j,temp,n;
-    printf("How many numbers? ");
-    scanf("%d",&n);
+#include <stdio.h>
+#include "utils.h"
 
-    for(i=0;i<n;i++)
-    {
-        scanf("%d",&a[i]);
-    }
+void sortNumbers() {
+    int a[10], i, j, temp, n;
 
-    for(i=0;i<n;i++)
-    {
-        for(j=i+1;j<n;j++)
-        {
-            if(a[i]>a[j])
-        {
-            temp = a[i];
-            a[i] = a[j];
-            a[j] = temp;
-        }
-        }
-    }
+    printf("\nNumber Sorter\n");
+    printSeparator('-', 40);
+    printf("How many numbers to sort? (1-10): ");
+    scanf("%d", &n);
 
-    printf("\nAscending is ");
+    if(n <= 0 || n > 10) { printError("Invalid number! (1-10)"); return; }
 
-    for(i=0;i<n;i++)
-    {
-        printf("%d\t",a[i]); 
-    }
+    printf("\nEnter %d numbers:\n", n);
+    for(i = 0; i < n; i++) { printf("  Number %d: ", i + 1); scanf("%d", &a[i]); }
 
-    for(i=0;i<n;i++)
-    {
-        for(j=i+1;j<n;j++)
-        {
-            if(a[i]<a[j])
-        {
-            temp = a[i];
-            a[i] = a[j];
-            a[j] = temp;
-        }
-        }
-    }
+    printf("\nOriginal : ");
+    for(i = 0; i < n; i++) { printf("%d", a[i]); if(i < n-1) printf(", "); }
+    printf("\n");
 
-    printf("\nDescending is ");
-    for(i=0;i<n;i++)
-    {
-        printf("%d\t",a[i]); 
-    }
+    for(i = 0; i < n; i++)
+        for(j = i+1; j < n; j++)
+            if(a[i] > a[j]) { temp = a[i]; a[i] = a[j]; a[j] = temp; }
+
+    printf("Ascending: ");
+    for(i = 0; i < n; i++) { printf("%d", a[i]); if(i < n-1) printf(", "); }
+    printf("\n");
+
+    for(i = 0; i < n; i++)
+        for(j = i+1; j < n; j++)
+            if(a[i] < a[j]) { temp = a[i]; a[i] = a[j]; a[j] = temp; }
+
+    printf("Descending: ");
+    for(i = 0; i < n; i++) { printf("%d", a[i]); if(i < n-1) printf(", "); }
+    printf("\n");
+
+    printSuccess("Sorting completed.");
+    printSeparator('=', 40);
 }
