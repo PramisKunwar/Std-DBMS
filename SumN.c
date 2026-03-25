@@ -1,25 +1,17 @@
-// Program to calculate sum of natural number from 1 to N using recursive function.
+#include <stdio.h>
+#include "utils.h"
 
-#include<stdio.h>
-int sum(int n);
-void calculateSumRecursive()
-{
+int sum(int n) { return (n == 0) ? 0 : n + sum(n - 1); }
+
+void calculateSumRecursive() {
     int n;
-    printf("Enter a number ");
-    scanf("%d",&n);
-    printf("Sum = %d", sum(n));
-}
+    printf("Enter a number: ");
+    scanf("%d", &n);
 
-int sum(int n)
-{
-    if(n!=0)
-    {
-        return (n + sum(n-1));
-    }
-    else
-    {
-        return n;
-    }
-}
+    if(n < 0) { printError("Please enter a non-negative number!"); return; }
 
-// The core logic is return (n + sum(n-1));
+    printf("\n  Sum: 1");
+    for(int i = 2; i <= n; i++) { printf(" + %d", i); SLEEP(80); }
+    printf(" = %d\n", sum(n));
+    printSeparator('=', 40);
+}
