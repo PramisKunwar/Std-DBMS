@@ -1,31 +1,43 @@
-// Program to generate Nth term of fibonacci series using recursive function.
+#include <stdio.h>
+#include "utils.h"
 
-#include<stdio.h>
-int fibo(int n);
-void generateFibonacci()
-{
-    int n,i;
-    printf("Enter a number ");
-    scanf("%d",&n);
-    printf("Fibonacci series is \t ");
-    for(i=1;i<=n;i++)
-    {
-        printf("%d, ",fibo(i));
-    }
+int fibo(int n) {
+    if(n == 0) return 0;
+    if(n == 1) return 1;
+    return fibo(n-1) + fibo(n-2);
 }
 
-int fibo(int n)
-{
-    if(n==0)
-    {
-        return 0;
+void generateFibonacci() {
+    int n, i;
+
+    printf("\nFibonacci Sequence Generator\n");
+    printSeparator('-', 40);
+    printf("Enter number of terms: ");
+    scanf("%d", &n);
+
+    if(n <= 0) { printError("Please enter a positive number!"); return; }
+
+    printf("\nSeries: ");
+    for(i = 1; i <= n; i++) {
+        printf("%d", fibo(i));
+        if(i < n) { printf(", "); fflush(stdout); SLEEP(200); }
     }
-    else if(n==1)
-    {
-        return 1;
+    printf("\n");
+
+    if(n >= 2) {
+        float ratio = (float)fibo(n) / fibo(n-1);
+        printf("\nGolden Ratio Approximation: %.6f\n", ratio);
     }
-    else
-    {
-        return (fibo(n-1)+fibo(n-2));
+
+    if(n <= 15) {
+        printf("\nVisual (bar per term):\n");
+        for(i = 1; i <= n; i++) {
+            int term = fibo(i);
+            printf("  %2d: ", term);
+            for(int j = 0; j < term % 40; j++) printf("|");
+            printf("\n");
+        }
     }
+
+    printSeparator('=', 40);
 }
