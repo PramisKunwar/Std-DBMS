@@ -1,25 +1,19 @@
-// Program to calculate factorial of natural number from 1 to N using recursive function.
+#include <stdio.h>
+#include "utils.h"
 
-#include<stdio.h>
-int fact(int n);
-void calculateFactorialRecursive()
-{
+int fact(int n) { return (n == 0) ? 1 : n * fact(n - 1); }
+
+void calculateFactorialRecursive() {
     int n;
-    printf("Enter a number ");
-    scanf("%d",&n);
-    printf("Factorial = %d", fact(n));
-}
+    printf("Enter a number: ");
+    scanf("%d", &n);
 
-int fact(int n)
-{
-    if(n==0)
-    {
-        return (1);
-    }
-    else
-    {
-        return (n * fact(n-1));
-    }
-}
+    if(n < 0) { printError("Factorial not defined for negative numbers!"); return; }
 
-// The core logic is return (n * fact(n-1));
+    printf("\n  %d! = %d", n, n);
+    for(int i = n-1; i >= 1; i--) { printf(" x %d", i); SLEEP(80); }
+    printf(" = %d\n", fact(n));
+
+    if(n > 12) printWarning("Large values may overflow int range.");
+    printSeparator('=', 40);
+}
