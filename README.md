@@ -14,102 +14,27 @@ This project consolidates 11 separate C programs into a single, interactive menu
 
 ---
 
-## File Structure
-
-```
-.
-├── menu.c              # Entry point - main menu and navigation loop
-├── tasks.h             # Function prototypes for all 11 tasks
-├── utils.h             # Shared utility functions (banner, separator, messages, progress bar)
-├── ResultCal.c         # Task 1  - Average marks and failed student count
-├── Greatest.c          # Task 2  - Greatest among 10 numbers
-├── Order.c             # Task 3  - Sort numbers ascending and descending
-├── MatrixAdd.c         # Task 4  - 3x3 matrix addition
-├── MatrixMul.c         # Task 5  - 3x3 matrix element-wise multiplication
-├── PalindromeCheck.c   # Task 6  - Palindrome string checker
-├── IntCheck.c          # Task 7  - Positive / Negative / Zero checker
-├── MultiTable.c        # Task 8  - Formatted multiplication table
-├── SumN.c              # Task 9  - Recursive sum of natural numbers
-├── FactN.c             # Task 10 - Recursive factorial
-├── FiboN.c             # Task 11 - Recursive Fibonacci series with golden ratio
-└── README.md           # This file
-```
+## Tasks Overview:
+Average marks & failed students  
+Greatest among 10 numbers  
+Sort numbers (asc/desc)  
+Add two 3x3 matrices  
+Multiply two 3x3 matrices  
+Palindrome check  
+Positive/Negative/Zero check  
+Multiplication table  
+Sum of natural numbers (recursion)  
+Factorial (recursion)  
+Fibonacci series (recursion)  
 
 ---
-
-## Tasks Overview
-
-| # | Task | Concepts Used |
-|---|------|---------------|
-| 1 | Average Marks & Failed Students | Arrays, loops, arithmetic |
-| 2 | Greatest Among 10 Numbers | Arrays, comparison logic |
-| 3 | Sort Numbers (Asc & Desc) | Bubble sort, nested loops |
-| 4 | Add Two 3x3 Matrices | 2D arrays, nested loops |
-| 5 | Multiply Two 3x3 Matrices (element-wise) | 2D arrays, nested loops |
-| 6 | Palindrome Check | Strings, string reversal, strcmp |
-| 7 | Number Sign Checker | Conditionals (if/else if/else) |
-| 8 | Multiplication Table | Loops, formatted output |
-| 9 | Sum of Natural Numbers | Recursion |
-| 10 | Factorial | Recursion |
-| 11 | Fibonacci Series | Recursion, golden ratio approximation |
-
----
-
-## How to Compile
-
-Make sure GCC is installed. Compile all source files together in one command:
-
-**Linux / macOS:**
-```bash
-gcc -o program menu.c ResultCal.c Greatest.c Order.c MatrixAdd.c MatrixMul.c \
-    PalindromeCheck.c IntCheck.c MultiTable.c SumN.c FactN.c FiboN.c -lm
-```
-
-**Windows (MinGW / GCC):**
-```bash
-gcc -o program.exe menu.c ResultCal.c Greatest.c Order.c MatrixAdd.c MatrixMul.c PalindromeCheck.c IntCheck.c MultiTable.c SumN.c FactN.c FiboN.c -lm
-```
-
-**Windows (cross-compile from Linux using MinGW-w64):**
-```bash
-x86_64-w64-mingw32-gcc -o program.exe menu.c ResultCal.c Greatest.c Order.c MatrixAdd.c MatrixMul.c PalindromeCheck.c IntCheck.c MultiTable.c SumN.c FactN.c FiboN.c -static -lm
-```
-
----
-
-## How to Run
-
-**Linux / macOS:**
-```bash
-./program
-```
-
-**Windows:**
-```
+## To run: 
+gcc -o program.exe menu.c ResultCal.c Greatest.c Order.c MatrixAdd.c MatrixMul.c PalindromeCheck.c IntCheck.c MultiTable.c SumN.c FactN.c FiboN.c -lm  
 program.exe
-```
-
-Always run from a terminal or command prompt so the window stays open. Double-clicking the .exe will close the window immediately after the program exits.
-
----
-
-## Design Notes
-
-- **Single compilation unit** - all 11 task files are compiled together and linked via `tasks.h` prototypes. There is no Makefile required.
-- **utils.h uses `static inline` functions** - this avoids multiple-definition linker errors when the header is included by multiple .c files.
-- **Cross-platform sleep** - `SLEEP(ms)` macro resolves to `Sleep()` on Windows and `usleep()` on Linux/macOS via `#ifdef _WIN32`.
-- **Input validation** - the main menu checks `scanf` return value and flushes the input buffer on bad input to prevent infinite loops.
-- **No external dependencies** - only standard C library headers are used (`stdio.h`, `stdlib.h`, `string.h`).
-
----
-
-## Requirements
-
-- GCC 4.8 or later (supports C99/C11 with `for` loop declarations inside blocks)
-- Standard C library (no external libraries needed beyond `-lm` for math)
 
 ---
 
 ## Author
+Pramis Kunwar
 
-Created as a C programming lab assignment demonstrating modular program design, recursion, arrays, and string operations.
+
